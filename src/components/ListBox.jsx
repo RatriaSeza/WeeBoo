@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AnimeList({ animes, onSelectedAnime }) {
+function ListBox({ animes, onSelectedAnime }) {
   const [isOpen1, setIsOpen1] = useState(true);
 
   
@@ -29,4 +29,4 @@ function AnimeList({ animes, onSelectedAnime }) {
 	);
 }
 
-export default AnimeList;
+export default ListBox;
