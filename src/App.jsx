@@ -1,6 +1,9 @@
 import './App.css';
 import Nav from './components/Nav';
 import Main from './components/Main';
+import { useState } from 'react';
+import Search from './components/Search';
+import NumResult from './components/NumResult';
 
 const animesData = [
   {
@@ -42,12 +45,16 @@ const animesData = [
 ];
 
 export default function App() {
+	const [animes, setAnimes] = useState(animesData);
 
   return (
     <>
-      <Nav />
-
-      <Main animesData={animesData}/>
+      <Nav>
+        <Search>
+          <NumResult animes={animes}/>
+        </Search>
+      </Nav>
+      <Main animes={animes} />
     </>
   );
 }
